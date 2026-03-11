@@ -1,12 +1,13 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 import React, { Component } from "react";
-import Products from "./Products";
-import { Button } from 'react-bootstrap';
-import Rating from "./Ratings";
-import Product from "./Product";
-import JumboTronComponent from "./JumboTronComponent";
-import UserForm from "./UserForm";
+// import Products from "./Products";
+// import { Button } from 'react-bootstrap';
+// import Rating from "./Ratings";
+// import Product from "./Product";
+// import JumboTronComponent from "./JumboTronComponent";
+// import UserForm from "./UserForm";
+import GitHub from "./GitHub";
 
 
 class App extends Component {
@@ -21,15 +22,17 @@ class App extends Component {
 
         {/* EXAMPLE 3: Passing content from outside component via props.children */}
         {/* Anything in this opening and closing tags, that can be added to the jumbotron we built, this is referred to 'children'. So to call it we will say this.porps.children */}
-        <JumboTronComponent> 
+        {/* <JumboTronComponent> 
           This is a long sentence, and I want to insert content into the
           jumbotron component from the outside.
-
         </JumboTronComponent>
 
         <UserForm />
         
-        <Products />
+        <Products /> */}
+
+        <GitHub />
+
       </div>
     );
   }
