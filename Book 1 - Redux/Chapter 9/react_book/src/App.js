@@ -1,16 +1,19 @@
 import React, { Component } from "react";
-import Products from "./Products";
 import { Button } from "react-bootstrap";
 import Rating from "./Rating.js";
 import JumboTronComponent from "./JumboTronComponent";
-import UserForm from "./UserForm";
-import GitHub from "./GitHub";
+
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Nav, Navbar } from "react-bootstrap";
+
+import Products from "./Products";
 import Hello from "./Hello.js";
 import GitHubUser from "./GitHubUser";
 import { getApp } from "firebase/app";
 import User from "./User.js";
+
+import UserForm from "./UserForm";
+import GitHub from "./GitHub";
 
 class App extends Component {
   constructor(props) {
@@ -24,6 +27,8 @@ class App extends Component {
         <BrowserRouter>
           <div>
             <Routes>
+              <Route path="/edit/:id" element={<UserForm />} />
+              <Route path="/add" element={<UserForm />} />
               <Route exact path="/" element={<User />} />
               <Route path="/*" element={<NotFound />} />
             </Routes>
