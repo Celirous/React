@@ -12,21 +12,21 @@ class GitHub extends Component {
     // this.getGitHubData("darrel");
     this.state = {
       data: [],
-      isLoading: false,
+      isLoading: false, //this is for the spinner, it is off on default and switches on when you start searching 
       searchTerm: "",
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-    componentDidMount() {
+    // componentDidMount() {
     //   this.getGitHubData("damian");
-    }
+    // }
 
   handleSubmit(e) {
-    e.preventDefault();
+    e.preventDefault(); // this prevents React from using the default submit action, therefore the page wont reload, only update 
     this.setState({
-      isLoading: true,
+      isLoading: true, // this makes the spinner load when you start searching 
     });
     this.getGitHubData(this.state.searchTerm);
   }

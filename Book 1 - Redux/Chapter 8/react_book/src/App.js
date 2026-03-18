@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Products from "./Products";
-import { Button } from 'react-bootstrap';
-import Rating from "./Rating.js";
-import JumboTronComponent from './JumboTronComponent';
-import UserForm from "./UserForm";
+// import Products from "./Products";
+// import { Button } from 'react-bootstrap';
+// import Rating from "./Rating.js";
+// import JumboTronComponent from './JumboTronComponent';
+// import UserForm from "./UserForm";
 import GitHub from './GitHub';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Nav, Navbar } from 'react-bootstrap';
