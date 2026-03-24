@@ -1,40 +1,45 @@
-import React, { useReducer } from 'react';
-import ToDoList from './ToDoList'
-import { v4 as uuidv4 } from 'uuid';
+import React, { useReducer } from "react";
+import ToDoList from "./ToDoList";
+import { v4 as uuidv4 } from "uuid";
 
 const todosInitialState = {
-  todos: [{ id: 1, text: "finishing writing hooks chapter" },
-  { id: 2, text: "play with kids" },
-  { id: 3, text: "read bible" }
-  ]
+  todos: [],
 };
 
 function todosReducer(state, action) {
   switch (action.type) {
-    case 'add':
-      const newToDo = { id: uuidv4(), text: action.payload }
+
+    case "get":
+      return { ...state, todos: action.payload };
+
+    case "add":
+      // const newToDo = { id: uuidv4(), text: action.payload };
       // add new todo onto array
-      const addedToDos = [...state.todos, newToDo]
+      const addedToDos = [...state.todos, action.payload];
       // spread our state and assign todos
-      return { ...state, todos: addedToDos }
-    case 'edit':
-      const updatedToDo = { ...action.payload }
-      const updatedToDoIndex = state.todos.findIndex(t => t.id ===
-        action.payload.id)
+      return { ...state, todos: addedToDos };
+
+    case "edit":
+      const updatedToDo = { ...action.payload };
+      const updatedToDoIndex = state.todos.findIndex(
+        (t) => t.id === action.payload.id,
+      );
       const updatedToDos = [
         ...state.todos.slice(0, updatedToDoIndex),
         updatedToDo,
-        ...state.todos.slice(updatedToDoIndex + 1)
+        ...state.todos.slice(updatedToDoIndex + 1),
       ];
-      return { ...state, todos: updatedToDos }
-    case 'delete':
-      const filteredTodoState = state.todos.filter(todo => todo.id !==
-        action.payload.id)
-      return { ...state, todos: filteredTodoState }
+      return { ...state, todos: updatedToDos };
+
+    case "delete":
+      const filteredTodoState = state.todos.filter(
+        (todo) => todo.id !== action.payload.id,
+      );
+      return { ...state, todos: filteredTodoState };
     default:
-      return todosInitialState
+      return todosInitialState;
   }
-};
+}
 
 export const TodosContext = React.createContext();
 
@@ -45,11 +50,10 @@ function App() {
     <TodosContext.Provider value={{ state, dispatch }}>
       <ToDoList />
     </TodosContext.Provider>
-  )
+  );
 }
 
 export default App;
-
 
 // This code defines the **main application component (`App`)** for a React to-do list app, using the **`useReducer` hook** and **Context API** to manage global state.
 
@@ -107,13 +111,9 @@ export default App;
 
 // This file acts as the **central state manager** for the app. It defines how todos are added, edited, and deleted, and shares this logic with the rest of the app using React’s Context API.
 
-
-
-
-
 // =================================================================
 
-// OLD CODE 
+// OLD CODE
 
 // =================================================================
 

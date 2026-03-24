@@ -1,0 +1,29 @@
+{
+  "todos": [
+    {
+      "id": "0",
+      "text": "Finish Children of Time "
+    },
+    {
+      "id": "1",
+      "text": "Play with Gato"
+    },
+    {
+      "id": "2",
+      "text": "Charge Headphones"
+    },
+    {
+      "id": "3",
+      "text": "Replace Phone Screen"
+    },
+    {
+      "id": "4",
+      "text": "Work on code for React "
+    },
+    {
+      "id": "5",
+      "text": "Get used to Rolling"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
