@@ -1,14 +1,14 @@
 import { connect } from "react-redux";
 import Cart from "./Cart";
 
-function mapStateToProps(state) { // this picks waht pieces of state your components needs to access. In this case, the states that it is accessing is totalCost of cart and the products in the cart
+function mapStateToProps(state) { // this picks waht pieces of state your components needs to access. In this case, the states that it is accessing is totalCost of cart and the products in the cart, we specify the state variables because we are picking what state variables this component (cart) has access to (read access only)
   return {
     totalCost: state.cart.totalCost,
     productCart: state.cart.productCart,
   };
 }
 
-function mapDispatchToProps(dispatch) { //dispatch is how you send actions to Reduxt store to update the state. 
+function mapDispatchToProps(dispatch) { //dispatch is how you send actions to Reduxt store to update the state. So this gives the component (cart) access to write to the store. (write access)
   return {
     onAddProduct: (productName, productPrice) => // we create a prop called onAddProduct that the Cart component can call. 
       dispatch({
