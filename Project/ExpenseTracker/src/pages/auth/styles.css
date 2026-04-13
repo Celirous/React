@@ -1,0 +1,98 @@
+.login-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Keeping your signature background gradient */
+  background: linear-gradient(
+    90deg,
+    rgba(0, 204, 255, 1) 0%,
+    rgba(115, 33, 188, 1) 100%
+  );
+  font-family: Arial, sans-serif;
+}
+
+.auth-container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+  text-shadow: none; /* Removing shadow for a cleaner look */
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.auth-form input {
+  border: none;
+  border-bottom: 1px solid #ccc; /* Subtle bottom border only */
+  padding: 10px 0;
+  font-size: 18px;
+  outline: none;
+  color: #555;
+}
+
+.auth-form input::placeholder {
+  color: #aaa;
+}
+
+.login-btn {
+  background-color: #f38600; /* Matching the orange from your image */
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #d67500;
+}
+
+.divider {
+  font-weight: bold;
+  font-size: 18px;
+  color: #000;
+  margin: 20px 0;
+  text-align: left; /* Aligning 'OR' to the left like the screenshot */
+}
+
+.login-with-google-btn {
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  align-self: flex-start; /* Aligning button to left like screenshot */
+  border-radius: 4px;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: #7321bc;
+  text-decoration: underline;
+  margin-top: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}

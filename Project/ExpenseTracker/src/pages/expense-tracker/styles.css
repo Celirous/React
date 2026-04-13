@@ -1,0 +1,111 @@
+.tracker-page {
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(90deg, rgba(0, 204, 255, 1) 0%, rgba(115, 33, 188, 1) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.header {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-photo, .profile-placeholder {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.profile-placeholder {
+  background: #f38600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.sign-out-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid white;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.main-container {
+  display: flex;
+  gap: 25px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.dashboard-card, .transactions-container {
+  background: white;
+  color: #333;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.dashboard-card { flex: 1; }
+.transactions-container { flex: 1.5; }
+
+.balance h2.positive { color: #2ecc71; }
+.balance h2.negative { color: #e74c3c; }
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.add-transaction { display: flex; flex-direction: column; gap: 12px; }
+.add-transaction input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.submit-btn {
+  background: #f38600;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  list-style: none;
+}
+
+.transaction-item .income { color: #2ecc71; }
+.transaction-item .expense { color: #e74c3c; }
+
+.edit-btn { background: #3498db; color: white; border: none; padding: 5px 8px; border-radius: 4px; cursor: pointer; }
+.delete-btn { background: #e74c3c; color: white; border: none; padding: 5px 8px; border-radius: 4px; cursor: pointer; margin-left: 5px; }
